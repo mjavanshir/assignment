@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": -118.2, "left": 319.6, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 29.4, "left": 37.8, "attrs": {} },
+    { "type": "board-esp32-devkit-c-v4", "id": "esp1", "top": 76.8, "left": -119.96, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -124.5, "left": -187.8, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp1:D2", "dht1:SDA", "green", [ "h0" ] ],
+    [ "esp1:GND.1", "dht1:GND", "black", [ "h0" ] ],
+    [ "esp1:3V3", "dht1:VCC", "green", [ "h0" ] ],
+    [ "uno:GND.1", "dht1:GND", "black", [ "v0" ] ],
+    [ "dht1:VCC", "uno:5V", "red", [ "v0" ] ],
+    [ "dht1:SDA", "uno:2", "green", [ "v0" ] ],
+    [ "esp1:5V", "uno:5V", "red", [ "h0" ] ],
+    [ "esp1:GND.1", "uno:GND.1", "black", [ "h134.55", "v-288", "h105.6" ] ],
+    [ "esp1:RX", "uno:1", "green", [ "h0" ] ],
+    [ "esp1:TX", "uno:0", "green", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
